@@ -89,3 +89,25 @@ function calculateArea(shape: "square", params: {side: number}): number;
 console.log("Task 4:", getStatusColor("active"));
 console.log("Task 4:", getStatusColor("inactive"));
 console.log("Task 4:", getStatusColor("new"));
+
+//Task 5
+type StringFormatter = (text: string, uppercase?: boolean) => string;
+
+const makeFirstBig: StringFormatter = (text, uppercase = false) => {
+  const s = text.trim();
+  if (s.length === 0) return "";
+
+  let res = s.charAt(0).toUpperCase() + s.slice(1);
+  if (uppercase) res = res.toUpperCase();
+  return res;
+};
+
+const cleanText: StringFormatter = (text, uppercase = false) => {
+  const s = text.trim();
+  return uppercase ? s.toUpperCase() : s;
+};
+
+console.log("Task 5:", makeFirstBig("  hello  "));        
+console.log("Task 5:", makeFirstBig("  hello  ", true));  
+console.log("Task 5:", cleanText("  hello  "));           
+console.log("Task 5:", cleanText("  hello  ", true));     

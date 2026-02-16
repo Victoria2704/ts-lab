@@ -124,3 +124,24 @@ const empty: number[] = [];
 console.log("Task 6 (nums):", getFirstElement(nums));   
 console.log("Task 6 (words):", getFirstElement(words));
 console.log("Task 6 (empty):", getFirstElement(empty));  
+
+//Task 7
+interface HasId {
+    id: number;
+}
+
+function findById<T extends HasId>(items: T[], id: number): T | undefined {
+    return items.find((item) => item.id === id);
+}
+
+const usersList = [
+  { id: 1, name: "V" },
+  { id: 2, name: "S" },
+  { id: 3, name: "M" },
+];
+
+const found1 = findById(usersList, 2);
+const found2 = findById(usersList, 99);
+
+console.log("Task 7:", found1); 
+console.log("Task 7:", found2); 

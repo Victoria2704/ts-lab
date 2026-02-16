@@ -111,3 +111,16 @@ console.log("Task 5:", makeFirstBig("  hello  "));
 console.log("Task 5:", makeFirstBig("  hello  ", true));  
 console.log("Task 5:", cleanText("  hello  "));           
 console.log("Task 5:", cleanText("  hello  ", true));     
+
+//Task 6
+function getFirstElement<T>(arr: T[]): T | undefined {
+    return arr[0];
+}
+
+const nums = [10, 20, 30];
+const words = ["apple", "banana", "cherry"];
+const empty: number[] = [];
+
+console.log("Task 6 (nums):", getFirstElement(nums));   
+console.log("Task 6 (words):", getFirstElement(words));
+console.log("Task 6 (empty):", getFirstElement(empty));  

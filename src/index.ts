@@ -71,3 +71,21 @@ function calculateArea(shape: "square", params: {side: number}): number;
  const squareArea = calculateArea("square", { side: 5 });
 
  console.log("Task 3:", { circleArea, squareArea });
+
+ //Task 4
+ type Status = "active" | "inactive" | "new"
+
+ function getStatusColor ( status: Status): string {
+    switch (status) {
+        case "active":
+            return "green";
+        case "inactive":
+            return "gray";
+        case "new":
+            return "blue";
+    }
+ }
+
+console.log("Task 4:", getStatusColor("active"));
+console.log("Task 4:", getStatusColor("inactive"));
+console.log("Task 4:", getStatusColor("new"));

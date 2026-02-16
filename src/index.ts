@@ -47,3 +47,27 @@ const bookB = createBook({
 });
 
 console.log("Task 2:", bookA, bookB);
+
+//Task 3
+type Shape = "circle" | "square";
+
+function calculateArea(shape: "circle", params: {radius: number}): number;
+function calculateArea(shape: "square", params: {side: number}): number;
+
+ function calculateArea (
+    shape: Shape,
+    params: { radius: number } | { side: number }
+ ): number {
+    if (shape === "circle") {
+        const { radius } = params as { radius: number };
+        return Math.PI * radius * radius;
+    } else {
+        const { side } = params as {side: number};
+        return side * side;
+    }
+ }
+ 
+ const circleArea = calculateArea("circle", { radius: 10 });
+ const squareArea = calculateArea("square", { side: 5 });
+
+ console.log("Task 3:", { circleArea, squareArea });

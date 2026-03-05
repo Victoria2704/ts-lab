@@ -1,22 +1,34 @@
 //Task 1
 interface User {
-    id: number;
-    name: string;
-    email?: string;
-    isActive: boolean;
+  id: number;
+  name: string;
+  email?: string;
+  isActive: boolean;
 }
 
-function createUser (
-    id: number,
-    name: string,
-    email: string | undefined,
-    isActive: boolean = true
+function createUser(
+  id: number,
+  name: string,
+  email?: string,
+  isActive: boolean = true
 ): User {
-    return { id, name, email, isActive};
+
+  const user: User = {
+    id,
+    name,
+    isActive
+  };
+
+  if (email !== undefined) {
+    user.email = email;
+  }
+
+  return user;
 }
 
-const user1 = createUser(1, "Victoria", undefined);
+const user1 = createUser(1, "Victoria");
 const user2 = createUser(2, "Vika", "vika@mail.com", false);
+
 console.log("Task1:", user1, user2);
 
 //Task 2

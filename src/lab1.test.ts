@@ -8,11 +8,11 @@ import {
   cleanText,
   getFirstElement,
   findById,
-} from "./lab1";
+} from "./lab1.js";
 
 describe("Lab1", () => {
   test("Task1: createUser default isActive=true", () => {
-    const u = createUser(1, "Victoria", undefined);
+    const u = createUser(1, "Victoria");
     expect(u.isActive).toBe(true);
   });
 

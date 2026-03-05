@@ -1,18 +1,28 @@
-//Task 1
+// Task 1
 export interface User {
-    id: number;
-    name: string;
-    email?: string;
-    isActive: boolean;
+  id: number;
+  name: string;
+  email?: string;
+  isActive: boolean;
 }
 
-export function createUser (
-    id: number,
-    name: string,
-    email?: string,
-    isActive: boolean = true
+export function createUser(
+  id: number,
+  name: string,
+  email?: string,
+  isActive: boolean = true
 ): User {
-    return { id, name, email, isActive};
+  const user: User = {
+    id,
+    name,
+    isActive,
+  };
+
+  if (email !== undefined) {
+    user.email = email;
+  }
+
+  return user;
 }
 
 //Task 2

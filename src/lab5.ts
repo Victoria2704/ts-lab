@@ -1,13 +1,13 @@
-export type { Transform } from "./lab5/transform.ts";
-export type { Where } from "./lab5/where.ts";
-export type { Sort } from "./lab5/sort.ts";
-export type { Group } from "./lab5/group.ts";
-export type { GroupBy } from "./lab5/groupBy.ts";
-export type { GroupTransform } from "./lab5/having.ts";
-export type { Having } from "./lab5/having.ts";
+export type { Transform } from "./lab5/transform.js";
+export type { Where } from "./lab5/where.js";
+export type { Sort } from "./lab5/sort.js";
+export type { Group } from "./lab5/group.js";
+export type { GroupBy } from "./lab5/groupBy.js";
+export type { GroupTransform } from "./lab5/having.js";
+export type { Having } from "./lab5/having.js";
 
-export { createGroupBy } from "./lab5/groupBy.ts";
-export { createHaving } from "./lab5/having.ts";
-export { createSort } from "./lab5/sort.ts";
-export { createWhere } from "./lab5/where.ts";
-export { query } from "./lab5/query.ts";
+export { createGroupBy } from "./lab5/groupBy.js";
+export { createHaving } from "./lab5/having.js";
+export { createSort } from "./lab5/sort.js";
+export { createWhere } from "./lab5/where.js";
+export { query } from "./lab5/query.js";

@@ -1,4 +1,4 @@
-import type { Transform } from "./transform.ts";
+import type { Transform } from "./transform.js";
 
 export type Sort<T extends object> = <K extends keyof T>(
   key: K

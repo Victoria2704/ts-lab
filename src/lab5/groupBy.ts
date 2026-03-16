@@ -1,5 +1,5 @@
-import type { Group } from "./group.ts";
-import type { Transform } from "./transform.ts";
+import type { Group } from "./group.js";
+import type { Transform } from "./transform.js";
 
 export type GroupBy<T extends object> = <K extends keyof T>(
   key: K

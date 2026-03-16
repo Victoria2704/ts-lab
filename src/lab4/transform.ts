@@ -1,1 +1,1 @@
-export type Transform<T> = (items: T[]) => T[];
+export type Transform<Input, Output = Input> = (items: Input[]) => Output[];

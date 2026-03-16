@@ -6,4 +6,5 @@ export type { GroupBy } from "./lab4/groupBy";
 export type { GroupTransform } from "./lab4/having";
 export type { Having } from "./lab4/having";
 
+export { createWhere } from "./lab4/where";
 export { query } from "./lab4/query";

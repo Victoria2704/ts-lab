@@ -4,3 +4,8 @@ export type Where<T extends object> = <K extends keyof T>(
   key: K,
   value: T[K]
 ) => Transform<T>;
+
+export function createWhere<T extends object>(): Where<T> {
+  return (key, value) => (items) =>
+    items.filter((item) => item[key] === value);
+}

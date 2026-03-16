@@ -4,3 +4,4 @@ export type { Sort } from "./lab4/sort";
 export type { Group } from "./lab4/group";
 export type { GroupBy } from "./lab4/groupBy";
 export type { GroupTransform } from "./lab4/having";
+export type { Having } from "./lab4/having";

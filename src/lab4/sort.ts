@@ -3,3 +3,12 @@ import type { Transform } from "./transform";
 export type Sort<T extends object> = <K extends keyof T>(
   key: K
 ) => Transform<T>;
+
+export function createSort<T extends object>(): Sort<T> {
+  return (key) => (items) =>
+    [...items].sort((left, right) => {
+      if (left[key] < right[key]) return -1;
+      if (left[key] > right[key]) return 1;
+      return 0;
+    });
+}

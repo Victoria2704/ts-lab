@@ -1,4 +1,4 @@
-import type { Transform } from "./transform";
+import type { Transform } from "./transform.ts";
 
 export type Where<T extends object> = <K extends keyof T>(
   key: K,
@@ -6,6 +6,6 @@ export type Where<T extends object> = <K extends keyof T>(
 ) => Transform<T>;
 
 export function createWhere<T extends object>(): Where<T> {
-  return (key, value) => (items) =>
-    items.filter((item) => item[key] === value);
+  return (key, value) => (items: T[]) =>
+    items.filter((item: T) => item[key] === value);
 }

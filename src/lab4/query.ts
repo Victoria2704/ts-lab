@@ -1,4 +1,4 @@
-import type { Transform } from "./transform";
+import type { Transform } from "./transform.ts";
 
 type AnyTransform = Transform<any, any>;
 
@@ -33,7 +33,7 @@ export function query<
 export function query(
   ...steps: readonly AnyTransform[]
 ): Transform<unknown, unknown> {
-  return (items) => {
+  return (items: unknown[]) => {
     let result: unknown[] = items;
 
     for (const step of steps) {

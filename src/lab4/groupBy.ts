@@ -1,12 +1,12 @@
-import type { Group } from "./group";
-import type { Transform } from "./transform";
+import type { Group } from "./group.ts";
+import type { Transform } from "./transform.ts";
 
 export type GroupBy<T extends object> = <K extends keyof T>(
   key: K
 ) => Transform<T, Group<T, K>>;
 
 export function createGroupBy<T extends object>(): GroupBy<T> {
-  return (key) => (items) => {
+  return (key) => (items: T[]) => {
     const groups = new Map<T[typeof key], Group<T, typeof key>>();
 
     for (const item of items) {

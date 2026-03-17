@@ -9,7 +9,7 @@ import {
   type Group,
   type GroupTransform,
   type Transform,
-} from "./lab5.js";
+} from "./lab5.ts";
 
 type User = {
   id: number;

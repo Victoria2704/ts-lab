@@ -1,4 +1,4 @@
-import type { Transform } from "./transform.js";
+import type { Transform } from "./transform.ts";
 
 type AnyTransform = Transform<any, any>;
 

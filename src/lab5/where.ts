@@ -1,4 +1,4 @@
-import type { Transform } from "./transform.js";
+import type { Transform } from "./transform.ts";
 
 export type Where<T extends object> = <K extends keyof T>(
   key: K,
